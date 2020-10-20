@@ -1,0 +1,16 @@
+Variables to edit before launch ec2 instnace in custom vpc from variables.tf
+----------------------------------------------------------
+
+subnet-0ceb7e1b1f3164745 :subnet
+
+sg-0b2aefd7600766c8c  : securityGroups 
+
+keyName : testebs
+instanceName : webserver
+amis : ami-0947d2ba12ee1ff75
+
+access_key
+secret_key
+region : us-east-1
+availabilityZone : us-east-1a
+instanceType : t2.micro
