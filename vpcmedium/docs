@@ -1,0 +1,5 @@
+1.clone the the repo & copy the contents from "vpcmedium" folder 
+2.create vpc using these files ,change credentials from variables.tf
+3.check your vpc is up
+4.create ec2 instance from the files reside in ec2launch folder
+5.edit variables.tf accordingly
