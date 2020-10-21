@@ -1,11 +1,11 @@
 # variables.tf
 variable "access_key" {
-     default = "AKIAQKQXVCRKNIPKXSWO"
+     default = "xxxxxxxxxxxxxxxxxx"
 
 }
 
 variable "secret_key" {
-     default = "FBfZ+9g15p5rR73npXet33C8GMTB96m5Jhx8qQrK"
+     default = "xxxxxxxxxxxxxxxxxxxxx"
 
 }
 
