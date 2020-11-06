@@ -1,4 +1,3 @@
-## Create VPC ##
 ################ VPC #################
 resource "aws_vpc" "main" {
   cidr_block       = "${var.main_vpc_cidr}"
@@ -11,21 +10,15 @@ resource "aws_vpc" "main" {
   }
 }
 
-output "aws_vpc_id" {
-  value = "${aws_vpc.main.id}"
-}
-
-## Create Subnets ##
-resource "aws_subnet" "publicsub1" {
+ ################# Subnets #############
+# Subnets : public
+resource "aws_subnet" "public" {
+  count = "${length(var.subnets_cidr)}"
   vpc_id = "${aws_vpc.main.id}"
-  cidr_block = "192.168.0.0/22"
-  availability_zone = "${var.availability_zone1}"
-
-
+  cidr_block = "${element(var.subnets_cidr,count.index)}"
+  availability_zone = "${element(var.azs,count.index)}"
+  map_public_ip_on_launch = true
   tags = {
-    Name = "app-subnet-1"
-    }
-}
-output "aws_subnet_publicsub1" {
-  value = "${aws_subnet.publicsub1.id}"
+    Name = "public_Subnet-${count.index+1}"
+  }
 }
