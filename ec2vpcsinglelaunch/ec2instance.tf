@@ -1,6 +1,6 @@
 resource "aws_instance" "terraform_wapp" {
-    ami = "ami-0c8e97a27be37adfd"
-    instance_type = "t2.micro"
+    ami = "${var.instance_ami}"
+    instance_type = "${var.instance_type}"
     vpc_security_group_ids =  [ "${aws_security_group.terraform_private_sg.id}" ]
     subnet_id     = "${aws_subnet.subnet8.id}"
     key_name               = "vpc-test"
@@ -13,8 +13,8 @@ resource "aws_instance" "terraform_wapp" {
     }
 }
 resource "aws_instance" "terraform_web" {
-    ami = "ami-0c8e97a27be37adfd"
-    instance_type = "t2.micro"
+    ami = "${var.instance_ami}"
+    instance_type = "${var.instance_type}"
     vpc_security_group_ids =  [ "${aws_security_group.terraform_web_sg.id}" ]
     subnet_id     = "${aws_subnet.subnet1.id}"
     key_name               = "vpc-test"
