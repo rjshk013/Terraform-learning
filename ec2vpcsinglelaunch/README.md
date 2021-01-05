@@ -151,4 +151,7 @@ resource "aws_instance" "terraform_web" {
 
 
 finally check securitygroup.tf file also
+--------------------------------------------
+
+terraform delete
 
