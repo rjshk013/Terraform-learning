@@ -14,3 +14,14 @@ terraform plan -out vpc.plan
 terraform apply -var-file terraform.tfvars
 
 terraform show
+
+
+secure aws credentails method:
+-----------------------------
+edit vpc.tf as below 
+
+provider "aws" {
+  shared_credentials_file = "/path of .aws folder/.aws/credentials" 
+  
+  so it will fetch aws credentails form the local machine
+
