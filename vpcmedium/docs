@@ -3,3 +3,10 @@
 3.check your vpc is up
 4.create ec2 instance from the files reside in ec2launch folder
 5.edit variables.tf accordingly
+
+
+terraform init
+
+terraform plan -var-file terraform.tfvars
+
+terraform apply -var-file terraform.tfvars
