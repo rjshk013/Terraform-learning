@@ -1,12 +1,14 @@
 1.clone the the repo & copy the contents from "vpcmedium" folder 
-2.create vpc using these files ,change credentials from variables.tf
+2.create vpc using these files ,change aws credentials from variables.tf
 3.check your vpc is up
 4.create ec2 instance from the files reside in ec2launch folder
 5.edit variables.tf accordingly
 
+reference : https://brad-simonin.medium.com/create-an-aws-vpc-and-subnet-using-terraform-d3bddcbbcb6
+
 
 terraform init
 
-terraform plan -var-file terraform.tfvars
+terraform plan -out vpc.plan
 
 terraform apply -var-file terraform.tfvars
