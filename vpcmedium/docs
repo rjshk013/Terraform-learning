@@ -12,3 +12,5 @@ terraform init
 terraform plan -out vpc.plan
 
 terraform apply -var-file terraform.tfvars
+
+terraform show
