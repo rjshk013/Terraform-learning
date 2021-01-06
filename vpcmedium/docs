@@ -25,3 +25,4 @@ provider "aws" {
   
   so it will fetch aws credentails form the local machine
 
+remove secretkey & access id variables from variables.tf
