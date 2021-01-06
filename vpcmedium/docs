@@ -21,8 +21,11 @@ secure aws credentails method:
 edit vpc.tf as below 
 
 provider "aws" {
-  shared_credentials_file = "/path of .aws folder/.aws/credentials" 
+  region                  = "us-west-2"
+  shared_credentials_file = "/location of .aws/.aws/creds"
+  profile                 = "customprofile"
+}
   
-  so it will fetch aws credentails form the local machine
+  so it will fetch aws credentails from the local machine
 
 remove secretkey & access id variables from variables.tf
